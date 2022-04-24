@@ -1,4 +1,5 @@
 import React from 'react';
+import { selectItem } from '../actions';
 
 const App = () => {
   return(
