@@ -1,6 +1,7 @@
 // **************
 // Reducers
 // **************
+import { combineReducers } from "redux";
 
 // - Will temporarily return a static list of songs 
 //   and song details for testing purposes.
@@ -26,3 +27,10 @@ const selectedItemReducer = (selectedItem = null, action) => {
   }
   return selectedItem;
 };
+
+export default combineReducers(
+  {
+    items: itemsReducer,
+    selectedItem: selectedItemReducer
+  }
+);
