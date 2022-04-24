@@ -1,12 +1,12 @@
 import React from 'react';
-import { selectItem } from '../actions';
+import ItemsList from './ItemsList';
 
 const App = () => {
   return(
     <div>
-      App
+      <ItemsList />
     </div>
-  );
+  )
 }
 
 export default App;
