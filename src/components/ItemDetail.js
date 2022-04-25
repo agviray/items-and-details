@@ -1,11 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const ItemDetail = (props) => {
-  console.log(props)
+const ItemDetail = ({ item }) => {
+  if (!item) {
+    return (
+      <div>Please select an item</div>
+    );
+  }
+
   return(
     <div>
-      ItemDetail
+      {item.title}
     </div>
   );
 }
