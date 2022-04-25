@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { selectItem } from '../actions';
+
 // Using class based component here.
 class ItemsList extends React.Component {
   renderList() {
@@ -8,7 +10,10 @@ class ItemsList extends React.Component {
       return (
         <div className="item" key={item.title}>
           <div className="right floated content">
-            <button className="ui button primary">
+            <button 
+              className="ui button primary"
+              onClick={() => this.props.selectItem(item)}  
+            >
               Select
             </button>
           </div>
@@ -33,5 +38,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(ItemsList);
+export default connect(mapStateToProps, {
+  selectItem: selectItem
+})(ItemsList);
 
