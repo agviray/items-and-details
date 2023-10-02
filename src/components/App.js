@@ -3,8 +3,8 @@ import ItemsList from './ItemsList';
 import ItemDetail from './ItemDetail';
 
 const App = () => {
-  return(
-    <div className="ui container grid">
+  return (
+    <div style={{ padding: '5rem 0 0 0' }} className="ui container grid">
       <div className="ui row">
         <div className="column eight wide">
           <ItemsList />
@@ -14,7 +14,7 @@ const App = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default App;
