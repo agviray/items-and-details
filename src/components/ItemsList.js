@@ -10,9 +10,9 @@ class ItemsList extends React.Component {
       return (
         <div className="item" key={item.title}>
           <div className="right floated content">
-            <button 
+            <button
               className="ui button primary"
-              onClick={() => this.props.selectItem(item)}  
+              onClick={() => this.props.selectItem(item)}
             >
               Select
             </button>
@@ -24,21 +24,16 @@ class ItemsList extends React.Component {
   }
 
   render() {
-    return (
-      <div className="ui divided list">
-        {this.renderList()}
-      </div>
-    );
+    return <div className="ui divided list">{this.renderList()}</div>;
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    items: state.items
-  }
-}
+    items: state.items,
+  };
+};
 
 export default connect(mapStateToProps, {
-  selectItem: selectItem
+  selectItem: selectItem,
 })(ItemsList);
-
